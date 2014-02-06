@@ -1,0 +1,81 @@
+@import '_normalize.scss';
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+
+$body-font: 400 18px/1.5em "futura-pt",sans-serif;
+$body-bg: #2B303A;
+
+$helion3-green: #CCDC89;
+
+$nav-font: 300 24px/1.8em "proxima-nova-alt-ext-cond",sans-serif;
+$nav-box-shadow: #000;
+$nav-anchor-color: #fff;
+
+$content-bg: #fff;
+$content-inset-shadow: #566686;
+
+$anchor-color: #D5E6FF;
+
+
+body { background: $body-bg; font: $body-font }
+a {
+	color: $anchor-color; 
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline
+	}
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 580px;
+
+	&>section {
+		@include border-radius(2px, 2px);
+		/*@include single-box-shadow($content-inset-shadow, 0, 0, 0, 2px, false);*/
+		/* background: $content-bg; */
+	}
+}
+
+h1 {
+  margin: 0 auto;
+  background: url('../img/Helion3-green.png') top left no-repeat;
+  width: 580px;
+  height: 246px;
+  text-indent: -9999px;
+  a { display: block }
+}
+
+
+nav {
+
+	ul { overflow: hidden; padding: 0 10px; margin: 0; border: 1px solid $helion3-green; border-left: none; border-right: none }
+	li {
+		list-style: none;
+		float: left;
+
+		a {
+			@include single-transition(all, 150ms, ease-in-out);
+			display: block;
+			padding: 0 20px;
+			font: $nav-font;
+			text-transform: uppercase;
+			color: $nav-anchor-color;
+			&:hover {
+				background: $helion3-green;
+				text-decoration: none;
+				color: #000;
+				@include single-box-shadow($nav-box-shadow, 0, 0, 4px, 2px, false);
+			}
+		}
+	}
+}
+
+p, section { margin-top: 20px }
+
+
+footer { margin-top: 20px }
+footer ul { overflow: hidden; padding: 0; margin: 0; }
+footer li { list-style: none; float: left; padding-right: 10px; margin-right: 10px; border-right: 1px solid #5B5A5B; }
+footer li:last-child { border: 0 }
