@@ -1,26 +1,28 @@
-document.onreadystatechange = function(){
-  if (document.readyState == "complete" || document.readyState == "loaded") {
-    // Basic no conflict. Using $ for consistency.
-    (function($){
+// Basic no conflict. Using $ for consistency.
+(function($){
 
-        var path = location.pathname;
-        if( path === "/" ){
-          $( $('nav a').get(0) ).addClass('at');
-          return;
-        }
+  // Dom ready
+  $(function(){
 
-        var pathFound = false;
-        $('nav a').each(function(elem){
-          if( elem.href.indexOf(path) > 0 ){
-            $(elem).addClass('at');
-            pathFound = true;
-          }
-        });
+    // Set "home" when empty pathname
+    var path = location.pathname;
+    if( path === "/" ){
+      $('nav a').get(0).addClass('at');
+      return;
+    }
 
-        if( !pathFound ){
-          $( $('nav a').get(1) ).addClass('at');
-        }
+    // Check other links
+    var pathFound = false;
+    $('nav a').each(function(key,elem){
+      if( elem.href.indexOf(path) > 0 ){
+        $(elem).addClass('at');
+        pathFound = true;
+      }
+    });
 
-    })(simpleDOM);
-  }
-};
+    // Default to "article" for non-empty 
+    if( !pathFound ){
+      $('nav a').get(1).addClass('at');
+    }
+  });
+})(simpleDOM);
