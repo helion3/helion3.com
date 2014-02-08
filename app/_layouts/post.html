@@ -1,7 +1,7 @@
 {% include header.html %}
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 <section>
-    {{ content }}
+	<span class="date">{{ page.date | date_to_string }}</span>
+  {{ content }}
 </section>
 {% include footer.html %}

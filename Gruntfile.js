@@ -18,7 +18,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'app/_build/libs.min.js': ['app/_vendor/**/*.js'],
-          'app/_build/app.min.js': ['app/_js/*.js']
+          'app/_build/app.min.js': ['app/_js/*.js'],
+          '_site/css/app.min.css': ['app/_css/*.css']
         }
       }
     },
@@ -36,7 +37,7 @@ module.exports = function(grunt) {
       dev: {
         options: {
           sassDir: 'app/sass',
-          cssDir: 'app/css'
+          cssDir: 'app/_css'
         }
       }
     },
@@ -54,7 +55,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: 'app/**/*',
-        tasks: ['jshint','concat','compass','jekyll','uglify'], // @todo change eventually
+        tasks: ['jshint','compass','jekyll','uglify','concat'], // @todo change eventually
         options: {
           interrupt: true
         },
@@ -71,7 +72,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint','concat','compass','jekyll','uglify',]);
+  grunt.registerTask('default', ['jshint','compass','jekyll','uglify','concat']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     grunt.log.writeln(target + ': ' + filepath + ' has ' + action);

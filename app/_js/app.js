@@ -4,6 +4,11 @@ document.onreadystatechange = function(){
     (function($){
 
         var path = location.pathname;
+        if( path === "/" ){
+          $( $('nav a').get(0) ).addClass('at');
+          return;
+        }
+
         var pathFound = false;
         $('nav a').each(function(elem){
           if( elem.href.indexOf(path) > 0 ){

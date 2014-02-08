@@ -85,7 +85,7 @@ a {
 		// 	background: rgba(55, 61, 76, 0.9);
 		// }
 
-		p:first-child {
+		p:first-of-type {
 			margin-top: 0
 		}
 	}
@@ -124,11 +124,11 @@ nav {
 			font: $nav-font;
 			text-transform: uppercase;
 			color: $nav-anchor-color;
+			margin: 0 1px 0 1px;
 			&:hover, &.at {
 				background: $helion3-green;
 				text-decoration: none;
 				color: #000;
-				@include single-box-shadow($nav-box-shadow, 0, 0, 4px, 4px, false);
 			}
 		}
 	}
