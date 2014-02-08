@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "DHMC 2013 Year in Review"
+headtitle:  "DHMC 2013 Year in Review - Helion3 - Web, Desktop, & Mobile Software Architects - Portland Oregon"
 date:   2014-01-01 20:00:00
 categories: dhmc
 ---

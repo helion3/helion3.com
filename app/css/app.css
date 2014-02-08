@@ -433,49 +433,91 @@ th {
 }
 
 /* line 21, ../sass/app.scss */
-body {
-  background: #2b303a;
-  font: 400 18px/1.5em "futura-pt", sans-serif;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* line 22, ../sass/app.scss */
+/* line 27, ../sass/app.scss */
+html {
+  background: #232223;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 100%, #ffffff 100%), linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+  background-size: 100% 100%, 100px 100px;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 44, ../sass/app.scss */
+body {
+  font: 400 18px/1.4em "source-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 580px;
+}
+
+/* line 45, ../sass/app.scss */
 a {
-  color: #d5e6ff;
+  color: #5da0cb;
   text-decoration: none;
 }
-/* line 25, ../sass/app.scss */
+/* line 48, ../sass/app.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 30, ../sass/app.scss */
+/* line 53, ../sass/app.scss */
+.right {
+  float: right;
+}
+
+/* line 55, ../sass/app.scss */
 .container {
   margin: 0 auto;
   max-width: 580px;
 }
-/* line 34, ../sass/app.scss */
+/* line 59, ../sass/app.scss */
 .container > section {
-  -webkit-border-radius: 2px 2px;
-  -moz-border-radius: 2px / 2px;
-  border-radius: 2px / 2px;
-  /*@include single-box-shadow($content-inset-shadow, 0, 0, 0, 2px, false);*/
-  /* background: $content-bg; */
+  -webkit-border-radius: 0 4px;
+  -moz-border-radius: 0 / 4px;
+  border-radius: 0 / 4px;
+  background: rgba(25, 25, 25, 0.95);
+  color: #eee;
+  position: relative;
+  padding: 10px;
+}
+/* line 88, ../sass/app.scss */
+.container > section p:first-child {
+  margin-top: 0;
 }
 
-/* line 41, ../sass/app.scss */
+/* line 94, ../sass/app.scss */
 h1 {
   margin: 0 auto;
-  background: url("../img/Helion3-green.png") top left no-repeat;
-  width: 580px;
-  height: 246px;
+  background: url("../img/logo.png") top left no-repeat;
+  width: 424px;
+  height: 180px;
   text-indent: -9999px;
 }
-/* line 47, ../sass/app.scss */
+/* line 100, ../sass/app.scss */
 h1 a {
   display: block;
 }
 
-/* line 53, ../sass/app.scss */
+/* line 103, ../sass/app.scss */
+h2 {
+  text-align: center;
+  font: 300 24px/1.8em "proxima-nova-alt-ext-cond", sans-serif;
+  font-size: 36px;
+  color: #fff;
+  margin: 11px 0;
+  text-shadow: 1px 1px 2px black, 1px 1px 2px 2px black;
+  text-shadow: 1px 1px 2px 2px black, 1px 1px 2px 2px black;
+}
+
+/* line 113, ../sass/app.scss */
+nav {
+  margin-bottom: 20px;
+}
+/* line 115, ../sass/app.scss */
 nav ul {
   overflow: hidden;
   padding: 0 10px;
@@ -484,12 +526,12 @@ nav ul {
   border-left: none;
   border-right: none;
 }
-/* line 54, ../sass/app.scss */
+/* line 116, ../sass/app.scss */
 nav li {
   list-style: none;
   float: left;
 }
-/* line 58, ../sass/app.scss */
+/* line 120, ../sass/app.scss */
 nav li a {
   -webkit-transition: all 150ms ease-in-out;
   -moz-transition: all 150ms ease-in-out;
@@ -501,43 +543,40 @@ nav li a {
   text-transform: uppercase;
   color: white;
 }
-/* line 65, ../sass/app.scss */
-nav li a:hover {
+/* line 127, ../sass/app.scss */
+nav li a:hover, nav li a.at {
   background: #ccdc89;
   text-decoration: none;
   color: #000;
-  -webkit-box-shadow: 0 0 4px 2px black;
-  -moz-box-shadow: 0 0 4px 2px black;
-  box-shadow: 0 0 4px 2px black;
+  -webkit-box-shadow: 0 0 4px 4px black;
+  -moz-box-shadow: 0 0 4px 4px black;
+  box-shadow: 0 0 4px 4px black;
 }
 
-/* line 75, ../sass/app.scss */
-p, section {
-  margin-top: 20px;
-}
-
-/* line 78, ../sass/app.scss */
-footer {
-  margin-top: 20px;
-}
-
-/* line 79, ../sass/app.scss */
-footer ul {
-  overflow: hidden;
-  padding: 0;
+/* line 4, ../sass/_blog.scss */
+.article-list {
   margin: 0;
+  padding: 0;
 }
-
-/* line 80, ../sass/app.scss */
-footer li {
+/* line 8, ../sass/_blog.scss */
+.article-list li {
   list-style: none;
-  float: left;
-  padding-right: 10px;
-  margin-right: 10px;
-  border-right: 1px solid #5B5A5B;
+  position: relative;
 }
-
-/* line 81, ../sass/app.scss */
-footer li:last-child {
-  border: 0;
+/* line 13, ../sass/_blog.scss */
+.article-list .date {
+  display: block;
+  position: absolute;
+  width: 120px;
+  padding: 0 10px;
+  left: -130px;
+  background: rgba(90, 91, 93, 0.3);
+  -webkit-border-radius: 4px 0;
+  -moz-border-radius: 4px 0 / 0 4px;
+  border-radius: 4px 0 / 0 4px;
+}
+/* line 23, ../sass/_blog.scss */
+.article-list p {
+  padding-left: 10px;
+  border-left: 3px solid rgba(90, 91, 93, 0.3);
 }

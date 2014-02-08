@@ -10,6 +10,28 @@ module.exports = function(grunt) {
     //     }
     //   }
     // },
+    concat: {
+      options: {
+        // define a string to put between each file in the concatenated output
+        separator: ';'
+      },
+      dist: {
+        files: {
+          'app/_build/libs.min.js': ['app/_vendor/**/*.js'],
+          'app/_build/app.min.js': ['app/_js/*.js']
+        }
+      }
+    },
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+      },
+      dist: {
+        files: {
+          '_site/js/app.min.js': ['app/_build/*.js']
+        }
+      }
+    },
     compass: {
       dev: {
         options: {
@@ -27,12 +49,12 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      all: ['Gruntfile.js']
+      all: ['Gruntfile.js','app/_js/*.js','app/_vendor/**/*.js']
     },
     watch: {
       scripts: {
         files: 'app/**/*',
-        tasks: ['jshint','compass','jekyll'],
+        tasks: ['jshint','concat','compass','jekyll','uglify'], // @todo change eventually
         options: {
           interrupt: true
         },
@@ -41,13 +63,15 @@ module.exports = function(grunt) {
   });
 
   // grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint','compass','jekyll']);
+  grunt.registerTask('default', ['jshint','concat','compass','jekyll','uglify',]);
 
   grunt.event.on('watch', function(action, filepath, target) {
     grunt.log.writeln(target + ': ' + filepath + ' has ' + action);

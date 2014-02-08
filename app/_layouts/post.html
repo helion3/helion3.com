@@ -1,7 +1,7 @@
----
-layout: default
-bodyclass: blog
----
+{% include header.html %}
 <h2>{{ page.title }}</h2>
 <p class="meta">{{ page.date | date_to_string }}</p>
-<div class="post">{{ content }}</div>
+<section>
+    {{ content }}
+</section>
+{% include footer.html %}

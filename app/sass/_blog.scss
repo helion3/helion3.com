@@ -1,0 +1,27 @@
+
+
+
+.article-list {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		position: relative
+	}
+
+	.date {
+		display: block;
+		position: absolute;
+		width: 120px;
+		padding: 0 10px;
+		left: -130px;
+		background: rgba(90, 91, 93, 0.3);
+		@include border-radius(4px 0, 0 4px);
+	}
+
+	p {
+		padding-left: 10px;
+		border-left: 3px solid rgba(90, 91, 93, 0.3);
+	}
+}

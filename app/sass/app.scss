@@ -2,9 +2,10 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
+@import "compass/css3/text-shadow";
 
-$body-font: 400 18px/1.5em "futura-pt",sans-serif;
-$body-bg: #2B303A;
+$body-font: 400 18px/1.4em "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;;
+$body-bg: #232223;
 
 $helion3-green: #CCDC89;
 
@@ -12,13 +13,35 @@ $nav-font: 300 24px/1.8em "proxima-nova-alt-ext-cond",sans-serif;
 $nav-box-shadow: #000;
 $nav-anchor-color: #fff;
 
-$content-bg: #fff;
+$content-bg: transparent;
 $content-inset-shadow: #566686;
 
-$anchor-color: #D5E6FF;
+$anchor-color: #5DA0CB;
 
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
-body { background: $body-bg; font: $body-font }
+html {
+	background: $body-bg;
+  background-image: 
+  	linear-gradient(90deg, rgba(0, 0, 0, 0) 100%, #FFFFFF 100%), 
+  	linear-gradient(45deg, 
+  			rgba(0, 0, 0, 0.1) 25%, 
+  			rgba(0, 0, 0, 0) 25%, 
+  			rgba(0, 0, 0, 0) 50%, 
+  			rgba(0, 0, 0, 0.1) 50%, 
+  			rgba(0, 0, 0, 0.1) 75%, 
+  			rgba(0, 0, 0, 0) 75%, 
+  			rgba(0, 0, 0, 0));
+  background-size: 100% 100%, 100px 100px;
+  height: 100%;
+  width: 100%;
+}
+
+body { font: $body-font; min-width: 580px; }
 a {
 	color: $anchor-color; 
 	text-decoration: none;
@@ -27,29 +50,68 @@ a {
 	}
 }
 
+.right { float: right }
+
 .container {
 	margin: 0 auto;
 	max-width: 580px;
 
 	&>section {
-		@include border-radius(2px, 2px);
-		/*@include single-box-shadow($content-inset-shadow, 0, 0, 0, 2px, false);*/
-		/* background: $content-bg; */
+
+		@include border-radius(0, 4px);
+		background: rgba(25, 25, 25, 0.95);
+		color: #eee;
+		position: relative;
+		padding: 10px;
+		// border: 1px solid #2B303A;
+		// @include border-radius(2px, 2px);
+		// background: $content-bg;
+
+		// &:before,&:after {
+		// 	background: #616C86;
+		// 	background: rgba(97, 107, 134, 0.9);
+  //   	content: "";
+  //   	height: 100%;
+  //   	left: -6px;
+  //   	top: -6px;
+  //   	width: 100%;
+  //   	position: absolute;
+  //   	z-index: -1;
+		// }
+		// &:before {
+		// 	top: -12px;
+		// 	left: -12px;
+		// 	background: #373D4C;
+		// 	background: rgba(55, 61, 76, 0.9);
+		// }
+
+		p:first-child {
+			margin-top: 0
+		}
 	}
 }
 
 h1 {
   margin: 0 auto;
-  background: url('../img/Helion3-green.png') top left no-repeat;
-  width: 580px;
-  height: 246px;
+  background: url('../img/logo.png') top left no-repeat;
+  width: 424px;
+  height: 180px;
   text-indent: -9999px;
   a { display: block }
 }
 
+h2 {
+	text-align: center;
+	font: $nav-font;
+	font-size: 36px;
+	color: #fff;
+	margin: 11px 0;
+	@include single-text-shadow(1px, 1px, 2px, 2px, #000);
+}
+
 
 nav {
-
+	margin-bottom: 20px;
 	ul { overflow: hidden; padding: 0 10px; margin: 0; border: 1px solid $helion3-green; border-left: none; border-right: none }
 	li {
 		list-style: none;
@@ -62,20 +124,14 @@ nav {
 			font: $nav-font;
 			text-transform: uppercase;
 			color: $nav-anchor-color;
-			&:hover {
+			&:hover, &.at {
 				background: $helion3-green;
 				text-decoration: none;
 				color: #000;
-				@include single-box-shadow($nav-box-shadow, 0, 0, 4px, 2px, false);
+				@include single-box-shadow($nav-box-shadow, 0, 0, 4px, 4px, false);
 			}
 		}
 	}
 }
 
-p, section { margin-top: 20px }
-
-
-footer { margin-top: 20px }
-footer ul { overflow: hidden; padding: 0; margin: 0; }
-footer li { list-style: none; float: left; padding-right: 10px; margin-right: 10px; border-right: 1px solid #5B5A5B; }
-footer li:last-child { border: 0 }
+@import '_blog.scss';

@@ -1,41 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
-    <script type="text/javascript" src="//use.typekit.net/yho0acy.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <link rel="stylesheet" type="text/css" href="css/syntax.css">
-    <link rel="stylesheet" type="text/css" href="css/app.css">
-</head>
-<body class="{{ page.bodyclass }}">
-    <article class="container">
-        <header>
-            <h1><a href="/">{{ site.name }}</a></h1>
-        </header>
-        <nav>
-            <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">Blog</a></li>
-              <li><a href="https://twitter.com/helion_3" target="_blank">Twitter</a></li>
-            </ul>
-        </nav>
-        <section>
-            {{ content }}
-        </section>
-    </article>
-</body>
-<script type="text/javascript">
-    var clicky_site_ids = clicky_site_ids || [];
-    clicky_site_ids.push(100676916);
-    (function() {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = '//static.getclicky.com/js';
-        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-    })();
-</script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100676916ns.gif" /></p></noscript>
-</html>
+{% include header.html %}
+<h2>{{ page.title }}</h2>
+<section>
+  {{ content }}
+</section>
+{% include footer.html %}

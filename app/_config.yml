@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 permalink: none
 exclude: sass
+baseurl: /helion3.com/_site
