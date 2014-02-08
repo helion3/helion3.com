@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     compass: {
       dev: {
         options: {
-          sassDir: 'app/sass',
+          sassDir: 'app/_sass',
           cssDir: 'app/_css'
         }
       }

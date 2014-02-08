@@ -1,6 +1,5 @@
 name: Helion3
 markdown: redcarpet
 pygments: true
-permalink: none
-exclude: sass
+permalink: :title.html
 baseurl: /helion3.com/_site
