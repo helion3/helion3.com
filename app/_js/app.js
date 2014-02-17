@@ -13,9 +13,9 @@
 
     // Check other links
     var pathFound = false;
-    $('nav a').each(function(key,elem){
-      if( elem.href.indexOf(path) > 0 ){
-        $(elem).addClass('at');
+    $('nav a').each(function(){
+      if( this.href.indexOf(path) > 0 ){
+        $(this).addClass('at');
         pathFound = true;
       }
     });
