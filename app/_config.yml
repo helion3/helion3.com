@@ -2,5 +2,5 @@ name: Helion3
 markdown: redcarpet
 pygments: true
 permalink: :title.html
-baseurl: http://127.0.0.1/helion3.com/_site
-#baseurl: http://helion3.com
+#baseurl: http://127.0.0.1/helion3.com/_site
+baseurl: http://helion3.com
