@@ -46,8 +46,7 @@ module.exports = function(grunt) {
         // for some reason options won't apply if this is missing...
       },
       options: {
-        src: 'app',
-        drafts: true
+        src: 'app'
       }
     },
     jshint: {

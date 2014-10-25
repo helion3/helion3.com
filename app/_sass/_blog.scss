@@ -39,5 +39,11 @@
 
 p code, li code { color: #ccc }
 
-
 code, pre { font-family: "Source Code Pro", Monaco, monospace, sans-serif; }
+
+.large-img {
+  position: relative;
+  width: 800;
+  left: -222px;
+  margin-bottom: 20px;
+}
