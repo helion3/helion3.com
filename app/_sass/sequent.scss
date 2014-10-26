@@ -1,0 +1,79 @@
+@import '_variables.scss';
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+body {
+  font: $body-font;
+  padding: 0;
+  margin: 0;
+  background: #000 url('../img/sequent/sequent-bg.png') no-repeat;
+  background-size: cover;
+  color: #F3F3F3;
+}
+
+.container {
+}
+
+h1 {
+  margin: 0 auto;
+  margin-top: 30px;
+  background: url('../img/sequent/title.png') top left no-repeat;
+  width: 500px;
+  height: 110px;
+  text-indent: -9999px;
+  a { display: block }
+}
+
+.content-bg {
+  background: rgba(20, 20, 20, 0.70);
+  padding-top: 40px;
+  position: absolute;
+  top: 170px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content-wrap {
+  width: 720px;
+  margin: 0 auto;
+
+  h4 {
+    color: #aaa;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font: $nav-font;
+    font-size: 32px;
+    line-height: 1em;
+  }
+}
+
+.content {
+  border-top: 1px solid #6C6C6C;
+  border-bottom: 1px solid #393939;
+  position: relative;
+  @include border-radius(4px);
+  @include single-box-shadow(0, 0, 5, 1, #222, false);
+  margin: 10px 0;
+  // background: #fefefe;
+  background: rgba(0, 0, 0, 0.80);
+  padding: 10px;
+}
+
+.badges {
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  li {
+    float: left;
+    width: 107px;
+    list-style: none;
+    text-align: center;
+  }
+  span {
+    display: block;
+    text-align: center;
+  }
+}

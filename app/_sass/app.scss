@@ -1,22 +1,11 @@
+@import '_variables.scss';
 @import '_syntax.scss';
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
 @import "compass/css3/text-shadow";
 
-$body-font: 400 18px/1.4em "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;;
-$body-bg: #232223;
 
-$helion3-green: #CCDC89;
-
-$nav-font: 300 24px/1.8em "proxima-nova-alt-ext-cond",sans-serif;
-$nav-box-shadow: #000;
-$nav-anchor-color: #fff;
-
-$content-bg: transparent;
-$content-inset-shadow: #566686;
-
-$anchor-color: #5DA0CB;
 
 *, *:before, *:after {
 	-moz-box-sizing: border-box;

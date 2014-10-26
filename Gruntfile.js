@@ -19,7 +19,8 @@ module.exports = function(grunt) {
         files: {
           'app/_build/_libs.min.js': ['app/_vendor/**/*.js'],
           'app/_build/app.min.js': ['app/_js/*.js'],
-          '_site/css/app.min.css': ['app/_css/*.css']
+          '_site/css/app.min.css': ['app/_css/app.css'],
+          '_site/css/sequent.min.css': ['app/_css/sequent.css']
         }
       }
     },
