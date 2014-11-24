@@ -69,6 +69,7 @@ h1 {
   li {
     float: left;
     width: 115px;
+    margin: 10px 0;
     list-style: none;
     text-align: center;
   }
@@ -77,3 +78,12 @@ h1 {
     text-align: center;
   }
 }
+
+footer {
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #D6D7D0;
+}
+
+a, a:link { color: #2CB5FF }
