@@ -26,7 +26,7 @@ h1 {
 
 .content-bg {
   background: rgba(20, 20, 20, 0.70);
-  padding-top: 40px;
+  padding-top: 20px;
   position: absolute;
   top: 170px;
   left: 0;
@@ -55,7 +55,6 @@ h1 {
   @include border-radius(4px);
   @include single-box-shadow(0, 0, 5, 1, #222, false);
   margin: 10px 0;
-  // background: #fefefe;
   background: rgba(0, 0, 0, 0.80);
   padding: 10px;
 }
@@ -87,3 +86,17 @@ footer {
 }
 
 a, a:link { color: #2CB5FF }
+
+.screenshot {
+  width: 620px;
+  margin: 20px auto;
+  padding: 5px;
+  border: 1px solid #393939;
+}
+
+.appstore {
+  display: block;
+  width: 200px;
+  height: 65px;
+  margin: 0 auto 20px auto;
+}
