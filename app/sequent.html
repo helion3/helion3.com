@@ -10,6 +10,7 @@ sitemap:
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="google-site-verification" content="LLPpEfO1lkRovylqCFgQfiNq75oHfqQ8tOcT6h3D18A" />
+    <meta name="format-detection" content="telephone=no" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/rss.xml">
     <title>Sequent for iPhone, iPad, iOS - Helion3</title>
     <script type="text/javascript" src="//use.typekit.net/yho0acy.js"></script>
@@ -27,40 +28,46 @@ sitemap:
 
             <div class="content-wrap">
 
-                <a class="appstore" href=""><img src="img/appstore.png" alt="Click to view iOS App Store" /></a>
+                <p class="note">Note: An update is pending in the app store that properly lists iOS7 as a supported operating system.</p>
+
+                <a class="appstore" href="https://itunes.apple.com/us/app/sequent/id944804235?ls=1&amp;mt=8"><img src="img/appstore.png" alt="Click to view iOS App Store" /></a>
 
                 <section class="content">
-                    <p>
-                        Sequent is an iOS puzzle game. Your goal is to produce specific colors by <em>growing</em> them.
+                    <p>Sequent is an iOS puzzle game. Your goal is to grow several dozen target colors by harvesting and replanting solid-color tiles. Each color "plant" will grow into empty tiles around it - mixing its red, green, and blue color "genetics" with neighbors.</p>
+                    <p>It's up to you to mix primary colors, cultivate creatively, gain knowledge and increase your chances of genetic mutations. Using tools like a void tile (keeps valuable colors safe for re-use) or a magnifier (view RGB values of placed tiles) you'll producing a beautiful color garden while generating some of your favorite colors.
                     </p>
-                    <p>Designed for both iPhone and iPad, Sequent is an amazing chill-out game which can be played on your schedule. There are NO in-app purchases.</p>
+                    <p>Designed for iPhone and iPad, Sequent is an excellent chill-out game which can be played on your schedule. There are NO in-app purchases.</p>
 
-                    <p>We also offer Sequent Immersion (also on the App Store), an edition which contains a full selection of music by several talented independent musicians.</p>
-                    <p>Aside from the music, both editions are exactly the same.</p>
+                    <p>In-game, you may choose to download a full album of hand-picked music by several talented independent artists.</p>
                 </section>
 
-                <section class="screenshot"><img src="img/sequent/sequent-ipad-screenshot.png" alt="Sequent iPad screenshot" /></section>
+                <section class="screenshot"><img src="img/sequent/sequent-iphone-screenshot.jpg" alt="Sequent iPhone screenshot" /></section>
 
                 <h4>How To Play</h4>
                 <section class="content">
                     <p>
-                        Every game begins with a single, random color tile in a sea of empty (black) tiles.
+                        Every game begins with a lone color tile, the last in the universe.
                     </p>
-                    <p><em>Touch and hold a color tile to harvest it.</em></p>
+                    <p><em>Touch and hold the color tile to harvest it.</em></p>
                     <p>
-                        Harvesting a color splits it into its red, green, blue components. These appear in the color store - a window at the top
-                        right of the screen. You may collect as many color tiles as you want, but <strong>the maximum value for any color is 255.</strong>
+                        Harvesting a color splits it into its red, green, and blue components. These appear in the color palette - a window at the top
+                        right of the screen. You may collect as many color tiles as you want, but you may not exceed 255/255/255 when you plant <strong>since that's the maximum value - pure white.</strong>
                     </p>
                     <p><em>Touch and hold an empty (black) tile to plant the current color you hold.</em></p>
                     <p>
-                        Planted colors will quickly grow into adjacent tiles. They'll mix with nearby colors and rarely you'll see a minor genetic mutation.
+                        Planted colors will grow into adjacent tiles. The resulting color depends on surrounding tiles, and you'll occasionally see a genetic mutation.
                     </p>
                     <p>
-                        Each action earns you Knowledge - which improves harvest and planting speeds, mutation chances, as well as how many exact copies you'll spawn with each planting.
+                        Each action earns you knowledge. Knowledge improves harvest and planting speeds, mutation chances, tool discovery chances, as well as how many exact copies you'll spawn with each planting.
                     </p>
-                    <p><em>Tap a tile to place or remove a void tile. </em></p>
+                    <p><em>Tap an empty tile to place or remove a void tile. </em></p>
                     <p>
                         Nothing will grow on or through a void tile. Once you achieve pure red, you can make a compartment for safely growing pure red tiles.
+                    </p>
+                    <p>Eventually, you'll discover a special tool: the magnifier.</p>
+                    <p><em>Tap on a tool to collect for later.</em></p>
+                    <p>
+                        Tools will be helpful in specific situations. The magnifier will allow you to inspect the RGB values of a planted tile, making it easier to find colors in the range you're looking for. Each use destroys a magnifier, so be careful and only use them when needed.
                     </p>
                 </section>
 
@@ -186,13 +193,30 @@ sitemap:
                     </ul>
                 </section>
 
+                <h4>Tools</h4>
+                <section class="content">
+                    <p>You'll randomly discover pick-ups while playing. Once they drop, tap them to pick up. However, they are
+                    most useful in specific situations, so be careful about using them.</p>
+                    <ul class="tools">
+                        <li>
+                            <img src="img/sequent/magnifier.png" alt="Tool: Magnifier" />
+                            <ul>
+                                <li><strong>Name</strong>  <span>Magnifier</span></li>
+                                <li><strong>Description</strong>  <span>View tile RGB values</span></li>
+                                <li><strong>Rarity</strong>  <span>Common</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
                 <h4>Tips &amp; Tricks</h4>
                 <section class="content">
                     <ol>
-                    <li>RGB values may be within ten digits for secondary and higher colors, so you don't need to get the <em>exact</em> value.</li>
-                    <li>Planting only consumes up to 255 from each color. If you've gathered more, subtraction may help produce a new shade.</li>
                     <li>Shoot for pure primary colors first - they're easier to build new colors with.</li>
-                    <li>Use void tiles to keep pure colors safe. This will be even more important for upcoming features.</li>
+                    <li>Use void tiles to keep pure colors safe, so you can always pickup pure red, green, or blue tiles.</li>
+                    <li>255/255/255 is the max color value, and you may only plant this much at once. If you've gathered more, subtraction may help produce a new shade not yet on your gameboard.</li>
+                    <li>RGB values may be within ten digits for secondary and higher colors, so you don't need to get the <em>exact</em> value.</li>
+                    <li>Building the right RGB value is easier when you use a magnifier to view RGB values and plan ahead.</li>
                     <li>Colors won't grow if they'll be too dark.</li>
                     </ol>
                 </section>
@@ -220,6 +244,9 @@ sitemap:
                     <li><a href="http://freesound.org/people/Timbre/sounds/221683/">"another magic wand spell tinkle" by Timbre</a></li>
                     <li><a href="http://freesound.org/people/schluppipuppie/sounds/88329/">"sherman cable27" by schluppipuppie</a></li>
                     <li><a href="http://freesound.org/people/HerbertBoland/sounds/33369/">"MouthPop" by HerbertBoland</a></li>
+                    <li><a href="http://www.freesound.org/people/D%20W/sounds/145696/">"Brick-Drop-Concrete-05" by D W</a></li>
+                    <li><a href="http://www.freesound.org/people/D%20W/sounds/145696/">"smalldrop" by Matvey</a></li>
+                    <li><a href="http://www.freesound.org/people/duckduckpony/sounds/204028/">"Tumbleweed_Impact_001" by duckduckpony</a></li>
                     </ol>
                 </section>
 

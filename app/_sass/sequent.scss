@@ -7,6 +7,7 @@ body {
   padding: 0;
   margin: 0;
   background: #000 url('../img/sequent/sequent-bg.png') no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   color: #F3F3F3;
 }
@@ -27,11 +28,8 @@ h1 {
 .content-bg {
   background: rgba(20, 20, 20, 0.70);
   padding-top: 20px;
-  position: absolute;
-  top: 170px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  margin-top: 20px;
+  min-height: 2000px;
 }
 
 .content-wrap {
@@ -78,6 +76,38 @@ h1 {
   }
 }
 
+.tools {
+
+  margin: 0;
+  padding: 0;
+  
+  &>li {
+    overflow: hidden;
+    display: block;
+
+    img {
+      float: left;
+    }
+
+    ul {
+      padding: 0;
+      width: 590px;
+      float: right;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    strong {
+      color: #ccc;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: .8em;
+    }
+  }
+}
+
 footer {
   padding: 10px;
   font-size: 16px;
@@ -99,4 +129,8 @@ a, a:link { color: #2CB5FF }
   width: 200px;
   height: 65px;
   margin: 0 auto 20px auto;
+}
+
+.note {
+  font-size: 0.9em;
 }
