@@ -1,10 +1,10 @@
+@import '_fonts.scss';
 @import '_variables.scss';
 @import '_syntax.scss';
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
 @import "compass/css3/text-shadow";
-
 
 
 *, *:before, *:after {
@@ -92,7 +92,7 @@ h1 {
 h2 {
 	text-align: center;
 	font: $nav-font;
-	font-size: 36px;
+	font-size: 30px;
 	color: #fff;
 	margin: 11px 0;
 	@include single-text-shadow(1px, 1px, 2px, 2px, #000);
